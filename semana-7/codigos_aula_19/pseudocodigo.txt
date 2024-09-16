@@ -1,0 +1,39 @@
+BUSCA EM LARGURA(grafo, origem, destino)
+1 found <- FALSO
+2 Inicializar FILA f vazia
+3 f.enqueue(origem)
+4
+5 FAÇA
+6   v <- f.dequeue()
+7   SE v = destino
+8     ENTÃO found <- VERDADEIRO
+9     SENÃO se v não visitado
+10      PARA CADA adj adjacente de v FAÇA     
+10        SE adj não visitado 
+11          f.enqueue(adj)
+12 ENQUANTO found = FALSO e f não vazia
+13
+14 SE found = FALSO
+15   IMPRIMA "Caminho não existe"
+
+
+
+
+BUSCA EM PROFUNDIDADE(grafo, origem, destino)
+1 found <- FALSO
+2 Inicializar PILHA p vazia
+3 p.push(origem)
+4
+5 FAÇA
+6   v <- p.pop()
+7   SE v = destino
+8     ENTÃO found <- VERDADEIRO
+9     SENÃO se v não visitado
+10      PARA CADA adj adjacente de v FAÇA
+10        SE adj não visitado 
+11          p.push(adj)
+12 ENQUANTO found = FALSO e p não vazia
+13
+14 SE found = FALSO
+15   IMPRIMA "Caminho não existe"
+
